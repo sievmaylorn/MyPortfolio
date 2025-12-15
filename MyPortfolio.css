@@ -1,0 +1,255 @@
+    body {
+      background-color: #ffffff;
+      color: #212529;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    body.dark-mode {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    body.dark-mode .bg-light {
+      background-color: #1e1e1e !important;
+    }
+    body.dark-mode .card {
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+    }
+      .hero-section {
+      background-color: #ffffff;
+      transition: background-color 0.4s ease;
+    }
+    body.dark-mode .hero-section {
+      background-color: #1b1f23;
+    }
+    body.dark-mode .hero-section {
+      background-color: #1b1f23;
+    }
+
+    .hero-title { color: #000000; transition: color 0.4s ease, transform 0.4s ease; }
+    .hero-subtitle { color: #6c757d; }
+    .hero-text { color: #212529; }
+    .hero-muted { color: #6c757d; }
+
+    body.dark-mode .hero-title,
+    body.dark-mode .hero-text { color: #ffffff; transform: translateY(-2px); }
+
+    body.dark-mode .hero-subtitle,
+    body.dark-mode .hero-muted { color: #adb5bd; }
+
+    body.dark-mode .hero-subtitle,
+    body.dark-mode .hero-muted { color: #adb5bd; }
+
+    .hero-avatar {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #dee2e6;
+      color: #000;
+      font-size: 120px;
+      transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+    }
+
+    body.dark-mode .hero-avatar {
+      background-color: #6c757d;
+      color: #ffffff;
+      transform: scale(1.03);
+    }
+
+    body.dark-mode .hero-avatar {
+      background-color: #6c757d;
+      color: #ffffff;
+    }
+
+    body.dark-mode .hero-btn-main {
+      transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    body.dark-mode .hero-btn-main {
+      background-color: #ffffff;
+      color: #000000;
+      border-color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    body.dark-mode .hero-btn-outline {
+      transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+    }
+
+    body.dark-mode .hero-btn-outline {
+      border-color: #ffffff;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .hero-avatar {
+  width: 250px;
+  height: 250px;
+}
+
+/* ... (Existing styles for body, dark-mode, card, etc. remain the same) ... */
+
+    body {
+      background-color: #ffffff;
+      /* color: #2a649e; */
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+    h2{
+      color: #2a649e;
+    }
+   
+
+    /* ... (other dark-mode styles) ... */
+
+    .hero-section {
+      background-color: #ffffff;
+      transition: background-color 0.4s ease;
+    }
+    /* ... (other dark-mode styles for hero-section and text) ... */
+
+    /* Default size (Laptop/Desktop: >= 992px) */
+    .hero-avatar {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: #dee2e6;
+      color: #000;
+      font-size: 120px;
+      transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+      /* Ensure the contained image takes up the full space */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 5px solid white; /* Added border for better contrast */
+    }
+
+    .hero-avatar .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%; /* Keep image circular */
+    }
+
+    /* Tablet size (768px to 991px) */
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      .hero-avatar {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    /* Phone/Small screens (up to 767px) */
+    @media (max-width: 767.98px) {
+      .hero-avatar {
+        /* Set a smaller size for mobile screens */
+        width: 180px; 
+        height: 180px;
+        margin-top: -60px; /* Add some space above the text on mobile */
+      }
+    }
+
+    /* Remove the old size definitions which were less precise */
+    /*
+    .hero-avatar {
+      width: 250px;
+      height: 250px;
+    }
+    @media (max-width: 768px) {
+      .hero-avatar {
+        width: 180px;
+        height: 180px;
+      }
+    }
+    @media (max-width: 576px) {
+      .hero-avatar {
+        width: 150px;
+        height: 150px;
+      }
+    }
+    */
+    
+    /* ... (Rest of existing styles) ... */
+
+    /* 1. Define the specific style for the header */
+.hero-title {
+    /* Ensure the text color can be easily animated */
+    color: #000000;
+    /* Apply the animation: 'pulse-color' name, 2s duration, infinite loop, smooth start/end */
+    animation: pulse-color 2s infinite ease-in-out;
+}
+
+/* 2. Define the keyframes for the animation */
+@keyframes pulse-color {
+    /* At the start (0%), use the original color (Black) */
+    0% {
+        color: #1fe3af; /* Original Color */
+        text-shadow: none;
+    }
+    /* In the middle (50%), switch to the target color (Bright Blue) and add a glow */
+    50% {
+        color: #1465ba; /* Pulsing Color (Bright Blue) */
+        text-shadow: 0 0 10px rgba(0, 123, 255, 0.7); /* Optional: Adds a subtle blue glow */
+    }
+    /* At the end (100%), return to the original color (Black) */
+    100% {
+        color: #2da9cf; /* Original Color */
+        text-shadow: none;
+    }
+}
+
+.typing {
+  display: inline-block;
+  overflow: hidden;       /* Hide the overflowing text */
+  white-space: nowrap;    /* Prevent wrapping */
+  border-right: 0.15em solid #000; /* Cursor */
+  animation: typing 7s steps(24, end) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  0% { width: 0; }
+  50% { width: 100%; }
+  100% { width: 0; }
+}
+
+@keyframes blink {
+  0%, 50%, 100% { border-color: transparent; }
+  25%, 75% { border-color: rgb(255, 255, 255); }
+}
+
+
+/* Header style */
+/* Custom underline animation for navbar links */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #fff; /* White text for dark navbar */
+  text-decoration: none;
+  font-size: clamp(18px, 2vw, 22px);
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff; /* White underline */
+  bottom: -3px;
+  left: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
