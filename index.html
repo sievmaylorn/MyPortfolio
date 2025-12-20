@@ -21,6 +21,15 @@
 </head>
 <body>
 
+  <!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loading-content">
+    <h2>Welcome to My Portfolio 👋</h2>
+    <p>Loading, please wait...</p>
+    <div class="spinner"></div>
+  </div>
+</div>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
   <div class="container">
@@ -63,7 +72,7 @@
       <h4 class="display-4 fw-bold hero-title mt-3">
           <span class="typing">FrontEnd Developer</span>
       </h4>
-        <h4 class="hero-subtitle mb-4">by. Lorn Sievmay</h4>
+        <h4 class="hero-subtitle mb-4">by. Sievmay Lorn</h4>
         <p class="lead hero-text">
           I build accessible, pixel-perfect digital experiences for the web.<br>
           Creating interfaces that blend thoughtful design with robust engineering.
@@ -92,11 +101,11 @@
         <li> Feb-2024 - Present : <b>Royal University of Phnom Penh</b></li>
         <li> Feb-2024 - Sep-2024 : Year1 (C/C++)</li>
         <li> Nov-2024 - Sep-2025 : Year2 (Java/SQL/MySQL)</li>
-        <li> Sep-2025 - Present : Year3 (C#)</li>
+        <li> Sep-2025 - Present : Year3 (C#/ HTMl/ CSS/ ReactJS/ JS)</li>
         
         <br>
         <h4>Etec Center Courses</h4>
-        <li>Api-2024 - July-2024 : C/C++</li>
+        <li>Apr-2024 - July-2024 : C/C++</li>
         <li>Dec-2024 - June-2025 : Web Design(HTMl/CSS/JS/BS/ReactJS/
             TailwindCSS/VueJS/fetch API)</li>
         <li>July-2025 - Nov-2025 : (exam & get Scholarships Backend) PHP/Laravel/DataBase MySQL/API</li>
@@ -214,7 +223,7 @@
 
 <!-- Footer -->
 <footer class="bg-secondary text-white text-center py-3">
-  <p class="mb-0">© 2025 Lorn Sievmay | Front-End Developer</p>
+  <p class="mb-0">© 2025 | Sievmay Lorn | Front-End Developer</p>
 </footer>
 
 <!-- Bootstrap JS -->
@@ -235,8 +244,37 @@
   }
 
 
-  // Typing
+ // Disable right-click
+        document.addEventListener('contextmenu', event => event.preventDefault());
+
+        // Disable certain keys (F12, Ctrl+Shift+I)
+        document.addEventListener('keydown', function(e) {
+            if(e.key === "F12" || 
+               (e.ctrlKey && e.shiftKey && e.key === 'I') ||
+               (e.ctrlKey && e.key === 'U')) {
+                e.preventDefault();
+                // alert("Inspecting is disabled!");
+                alert("មិនបាច់ខំព្យាយាមInspectទេ snb jit🥴! you can't");
+            }
+        });
+
+        // Obfuscated JS function
+        function changeMessage() {
+            var msg = "You cannot easily change me!";
+            document.getElementById("message").innerText = msg;
+        }
   
+
+  // Hide loading screen after page loads
+ setTimeout(() => {
+  const loadingScreen = document.getElementById("loading-screen");
+  loadingScreen.style.opacity = "0";
+  loadingScreen.style.transition = "opacity 1s ease";
+  setTimeout(() => {
+    loadingScreen.style.display = "none";
+  }, 1000); // fade out duration
+}, 3000); // 10000ms = 10 seconds
+
 </script>
 
 </body>
